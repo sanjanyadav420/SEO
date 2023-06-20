@@ -1,199 +1,153 @@
-/* *
-{
-    margin: 0;
-    padding: 0;
-}
-
-.nav>div{
-
-    display: flex;
-
-}
-.nav>div:nth-child(2){
-    justify-content: space-evenly;
-    width: 40%;
-
-
-}
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    box-shadow: 3px 3px 3px 3px rgb(207, 197, 197);
-    display: flex;
-    padding: 0px 2%;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #003d63;
-    color: white;
-}
-
-.main{
-    height: 300px;
-  
-}
-.main>div>h1{
-    text-align: center;
-    align-items: center;
-    margin-top: 90px;
-   
-    font-size: 45px;
-}
-.main>div:nth-child(2){
-
-    text-align: center;
-    margin-top: 50px;
-    font-size: 18px;
-}
-
-.container{
-    height: 400px;
-   
-    display: grid;
-    grid-template-columns: repeat(4,.100px);
-
-    gap: 20px;
-    box-sizing: border-box;
-    column-gap: 2vw;
-
-    display: flex;
- 
-    text-align: center;
-    border-radius:20px;
-   
-   
-}
-.cards{
-    background-color: rgb(22, 209, 248);
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
-}
-.container>div{
- 
-    padding-top: 70px;
-    border-bottom-left-radius: 20%;
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    border-top-right-radius: 6px;
-
-}
-.container>div>p:nth-child(2){
-
- 
-    text-align: center;
-    padding: 15%;
-    letter-spacing: .100px;
-    line-height: 22px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.card{
-    background-color: #209df4;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
-
-}
-.footer{
-    margin-top: 40px;
-    height: 60px;
-    background-color: rgb(0,61,99);
-    text-align: center;
-    justify-content: center;
-
-    padding-top: 30px;
-    color: white;
-    font-size: 20px;
-} */
 
 * {
     margin: 0;
     padding: 0;
-}
-
-.nav > div {
-    display: flex;
-}
-
-.nav > div:nth-child(2) {
-    justify-content: space-evenly;
-    width: 40%;
-}
-
-.nav {
+    box-sizing: border-box;
+  }
+  
+  .nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 75px;
-    box-shadow: 3px 3px 3px 3px rgb(207, 197, 197);
-    display: flex;
-    padding: 0px 2%;
-    align-items: center;
-    justify-content: space-between;
     background-color: #003d63;
     color: white;
-}
-#point{
-    cursor: pointer;
-}
-
-.main {
-    height: 300px;
-}
-
-.main > div > h1 {
-    text-align: center;
+    display: flex;
     align-items: center;
-    margin-top: 90px;
-    font-size: 45px;
-}
+    justify-content: space-between;
+    padding: 0 2%;
+    box-shadow: 3px 3px 3px 3px rgb(207, 197, 197);
+    z-index: 999;
+  }
+  
 
-.main > div:nth-child(2) {
+  
+  .nav > div {
+    display: flex;
+  }
+  
+  .nav > div:nth-child(2) {
+    justify-content: space-evenly;
+    width: 40%;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+
+  
+  /* Styles for screens up to 768px wide */
+  @media (max-width: 768px) {
+    .nav > .menu-toggle {
+      display:block /* Show the hamburger menu toggle button */
+    }
+  
+    .nav > div {
+      display: none; /* Hide the regular navigation */
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      background-color: #003d63;
+      padding: 10px 0;
+      display: none;
+    }
+  
+    .nav ul.expand {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .nav .active {
+      color: red;
+    }
+  
+    .container > div {
+      width: 100%;
+    }
+  }
+  
+  /* Hamburger Menu Icon */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  
+  body {
+    background-image: url("images\ \(1\).jpg");
+    /* background-color: #cccccc; */
+  }
+  
+  .main {
+    height: 250px;
+  }
+  
+  .main > div > h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 150px;
+    font-size: 45px;
+    color: white;
+  }
+  
+  .main > div:nth-child(2) {
+    text-align: center;
+    margin-top: 40px;
     font-size: 18px;
-}
-
-.container {
-    /* height: 400px; */
+    color: white;
+  }
+  
+  .container {
     width: 95%;
-
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    box-sizing: border-box;
-    column-gap: 2vw;
-    display: flex;
     text-align: center;
-    border-radius: 20px;
-}
-
-.cards {
+  }
+  
+  .cards {
     background-color: rgb(22, 209, 248);
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.container > div {
-
-    width: 23%;
-    padding-top: 70px;
-    /* border-bottom-left-radius: 20%; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  
+  .container > div {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    padding-top: 60px;
     border-top-left-radius: 25%;
     border-bottom-right-radius: 25%;
     border-top-right-radius: 6px;
-}
-
-.container > div > p:nth-child(2) {
-    text-align: center;
+  }
+  
+  .container > div > p:nth-child(2) {
     padding: 15%;
-    letter-spacing: 0.100px;
+    letter-spacing: 0.1px;
     line-height: 22px;
     font-family: Georgia, "Times New Roman", Times, serif;
-}
-.card > button {
+  }
+  
+  .card > button {
+    margin-top: 70px;
     background-color: #003d63;
     color: white;
     padding: 10px 20px;
@@ -202,18 +156,21 @@
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer;
-}
-.card>p{
+  }
+  
+  .card > p {
     width: fit-content;
     height: 150px;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: #209df4;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.footer {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  
+  .footer {
     margin-top: 40px;
     height: 60px;
     background-color: rgb(0, 61, 99);
@@ -222,73 +179,46 @@
     padding-top: 30px;
     color: white;
     font-size: 20px;
-}
-
-/* Media Queries */
-
-/* Mobile Devices */
-@media only screen and (max-width: 480px) {
-    .nav > div:nth-child(2) {
-        display: none;
-    }
-
-    .nav {
-        padding: 0 10px;
-    }
-
+  }
+  
+  /* Additional styles for responsiveness */
+  
+  @media (max-width: 768px) {
     .main > div > h1 {
-        margin-top: 30px;
-        font-size: 30px;
+      margin-top: 80px;
+      font-size: 35px;
     }
-
+  
     .main > div:nth-child(2) {
-        margin-top: 20px;
-        font-size: 14px;
+      margin-top: 20px;
+      font-size: 16px;
     }
-
+  
     .container {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-        justify-content: center;
+      gap: 10px;
     }
-
+  
     .container > div {
-        padding-top: 30px;
-        border-radius: 20px;
-        margin-bottom: 20px;
+      height: auto;
+      padding-top: 30px;
+      border-radius: 6px;
     }
-}
-
-/* Tablets */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .nav > div:nth-child(2) {
-        justify-content: space-between;
-        width: 100%;
+  
+    .container > div > p:nth-child(2) {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 18px;
     }
-
-    .main > div > h1 {
-        margin-top: 60px;
-        font-size: 35px;
+  
+    .card > button {
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
-
-    .main > div:nth-child(2) {
-        margin-top: 30px;
-        font-size: 16px;
+  
+    .footer {
+      height: 40px;
+      padding-top: 15px;
+      font-size: 14px;
     }
-}
-
-/* Desktops and Larger Screens */
-@media only screen and (min-width: 769px) {
-    .main > div > h1 {
-        margin-top: 90px;
-        font-size: 45px;
-    }
-
-    .main > div:nth-child(2) {
-        margin-top: 50px;
-        font-size: 18px;
-    }
-}
-
-
+  }
+  
