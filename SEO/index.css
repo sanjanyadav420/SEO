@@ -142,6 +142,97 @@
     border-top-right-radius: 6px;
   }
   
+  /* Animation for navigation bar */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nav {
+  /* ...existing styles... */
+  animation: slideIn 0.5s forwards;
+}
+
+/* Animation for main section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main {
+  /* ...existing styles... */
+  animation: fadeIn 1s forwards;
+}
+
+/* Animation for cards in the container */
+@keyframes slideUp {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.cards {
+  /* ...existing styles... */
+  animation: slideUp 0.5s forwards;
+}
+
+/* Animation for footer */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  /* ...existing styles... */
+  animation: fadeInFromBottom 0.5s forwards;
+}
+
+/* Animation for cards in the container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.cards {
+  /* ...existing styles... */
+  animation: fadeIn 0.5s forwards;
+}
+
+
   .container > div > p:nth-child(2) {
     padding: 15%;
     letter-spacing: 0.1px;
@@ -179,7 +270,7 @@
     background-color: rgb(0, 61, 99);
     text-align: center;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
     color: white;
     font-size: 20px;
   }
@@ -222,6 +313,115 @@
       height: 40px;
       padding-top: 15px;
       font-size: 14px;
+     
     }
   }
   
+  /* Animation for navigation bar */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav {
+  /* ...existing styles... */
+  animation: slideIn 0.5s forwards;
+}
+
+/* Animation for main section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main {
+  /* ...existing styles... */
+  animation: fadeIn 1s forwards;
+}
+
+/* Animation for container */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: scaleIn 0.5s forwards;
+}
+
+/* Animation for cards in the container */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cards {
+  /* ...existing styles... */
+  animation: slideUp 0.5s forwards;
+}
+
+/* Animation for footer */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  /* ...existing styles... */
+  animation: fadeInFromBottom 0.5s forwards;
+}
+
+/* Add your existing CSS styles here */
+
+/* Animation for click effect */
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.clicked {
+  animation: clickEffect 0.3s;
+}
+
