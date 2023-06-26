@@ -2,9 +2,9 @@
 
 - Seo Studio
 
-2.Reports & Tools
+- Reports & Tools
 
-3.SumoSEOTools
+- SumoSEOTools
 
-4.66toolkit
+- 66toolkit
 
