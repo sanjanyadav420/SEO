@@ -1,6 +1,6 @@
 # SEO
 
-1.Seo Studio
+- Seo Studio
 
 2.Reports & Tools
 
